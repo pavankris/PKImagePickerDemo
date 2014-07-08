@@ -22,6 +22,8 @@
 		8913333E196B7A67001C7DAD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8913331D196B7A67001C7DAD /* UIKit.framework */; };
 		89133346196B7A67001C7DAD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 89133344196B7A67001C7DAD /* InfoPlist.strings */; };
 		89133348196B7A67001C7DAD /* PKImagePickerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89133347196B7A67001C7DAD /* PKImagePickerDemoTests.m */; };
+		89133353196B7A85001C7DAD /* PKImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89133352196B7A85001C7DAD /* PKImagePickerViewController.m */; };
+		89133357196B7CD6001C7DAD /* PKImageBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 89133356196B7CD6001C7DAD /* PKImageBundle.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,9 @@
 		89133343196B7A67001C7DAD /* PKImagePickerDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PKImagePickerDemoTests-Info.plist"; sourceTree = "<group>"; };
 		89133345196B7A67001C7DAD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		89133347196B7A67001C7DAD /* PKImagePickerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PKImagePickerDemoTests.m; sourceTree = "<group>"; };
+		89133351196B7A85001C7DAD /* PKImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKImagePickerViewController.h; sourceTree = "<group>"; };
+		89133352196B7A85001C7DAD /* PKImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKImagePickerViewController.m; sourceTree = "<group>"; };
+		89133356196B7CD6001C7DAD /* PKImageBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PKImageBundle.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +119,9 @@
 		8913331F196B7A67001C7DAD /* PKImagePickerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				89133356196B7CD6001C7DAD /* PKImageBundle.bundle */,
+				89133351196B7A85001C7DAD /* PKImagePickerViewController.h */,
+				89133352196B7A85001C7DAD /* PKImagePickerViewController.m */,
 				89133328196B7A67001C7DAD /* AppDelegate.h */,
 				89133329196B7A67001C7DAD /* AppDelegate.m */,
 				8913332B196B7A67001C7DAD /* Main_iPhone.storyboard */,
@@ -234,6 +242,7 @@
 				89133330196B7A67001C7DAD /* Main_iPad.storyboard in Resources */,
 				89133335196B7A67001C7DAD /* Images.xcassets in Resources */,
 				8913332D196B7A67001C7DAD /* Main_iPhone.storyboard in Resources */,
+				89133357196B7CD6001C7DAD /* PKImageBundle.bundle in Resources */,
 				89133324196B7A67001C7DAD /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +265,7 @@
 				89133333196B7A67001C7DAD /* ViewController.m in Sources */,
 				8913332A196B7A67001C7DAD /* AppDelegate.m in Sources */,
 				89133326196B7A67001C7DAD /* main.m in Sources */,
+				89133353196B7A85001C7DAD /* PKImagePickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
