@@ -44,6 +44,11 @@
     return YES;
 }
 
+
+-(BOOL)shouldAutorotate
+{
+    return NO;
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -185,6 +190,7 @@
     
     
 }
+
 
 -(IBAction)flash:(UIButton*)sender
 {
