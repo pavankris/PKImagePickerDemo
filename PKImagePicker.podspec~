@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "PKImagePicker"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Replacement for UIImagePickerController"
 
   s.description  = "Replacement for UIImagePickerController which provides album and camera switcher integrated in the controller, so that you dont have to write a seperate actionsheet for it"

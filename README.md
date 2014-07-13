@@ -7,7 +7,7 @@ PKImagePickerDemo
 
 ##Usage
 
-`pod 'PKImagePicker', '~> 0.0.1'`
+`pod 'PKImagePicker', '~> 0.0.2'`
 
 `PKImagePickerController *imagePicker = [[PKImagePickerController alloc]init];`
 
