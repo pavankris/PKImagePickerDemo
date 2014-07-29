@@ -88,6 +88,12 @@
         else if (self.interfaceOrientation == UIInterfaceOrientationLandscapeRight) {
         _captureVideoPreviewLayer.connection.videoOrientation = AVCaptureVideoOrientationLandscapeRight;
         }
+        
+        
+    if (self.delegate && [self.delegate respondsToSelector:@selector(ImagePickerOverlayForCamera:)]) {
+        [self.delegate ImagePickerOverlayForCamera:self.view];
+    }
+
     
     UIButton *camerabutton = [[UIButton alloc]initWithFrame:CGRectMake(CGRectGetWidth(self.view.bounds)/2-50, CGRectGetHeight(self.view.bounds)-100, 100, 100)];
     [camerabutton setImage:[UIImage imageNamed:@"PKImageBundle.bundle/take-snap"] forState:UIControlStateNormal];
@@ -253,8 +259,8 @@
 {
     
     [self dismissViewControllerAnimated:YES completion:^{
-        if ([self.delegate respondsToSelector:@selector(imageSelected:)]) {
-            [self.delegate imageSelected:self.selectedImage];
+        if ([self.delegate respondsToSelector:@selector(ImagePickerImageSelected:)]) {
+            [self.delegate ImagePickerImageSelected:self.selectedImage];
         }
         [self.imageSelectedView removeFromSuperview];
     }];
@@ -268,8 +274,8 @@
 -(IBAction)cancel:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:^{
-        if ([self.delegate respondsToSelector:@selector(imageSelectionCancelled)]) {
-            [self.delegate imageSelectionCancelled];
+        if ([self.delegate respondsToSelector:@selector(ImagePickerImageSelectionCancelled)]) {
+            [self.delegate ImagePickerImageSelectionCancelled];
         }
 
     }];

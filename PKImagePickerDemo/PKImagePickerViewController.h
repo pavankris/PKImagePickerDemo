@@ -10,9 +10,10 @@
 
 @protocol PKImagePickerViewControllerDelegate <NSObject>
 
--(void)imageSelected:(UIImage*)img;
--(void)imageSelectionCancelled;
-
+-(void)ImagePickerImageSelected:(UIImage*)img;
+-(void)ImagePickerImageSelectionCancelled;
+@optional
+-(void)ImagePickerOverlayForCamera:(UIView*)view;
 @end
 
 @interface PKImagePickerViewController : UIViewController<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
