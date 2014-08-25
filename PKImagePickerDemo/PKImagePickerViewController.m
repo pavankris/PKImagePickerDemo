@@ -143,12 +143,13 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [self.captureSession startRunning];
-
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
 }
 
 -(void)viewWillDisappear:(BOOL)animated
 {
     [self.captureSession stopRunning];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
 }
 
 - (void)didReceiveMemoryWarning
