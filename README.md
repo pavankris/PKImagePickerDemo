@@ -9,8 +9,7 @@ PKImagePickerDemo
 
 `pod 'PKImagePicker', '~> 0.0.2'`
 
-`PKImagePickerController *imagePicker = [[PKImagePickerController alloc]init];`
-
+`#import 'PKImagePickerViewController.h'`
+`PKImagePickerViewController *imagePicker = [[PKImagePickerViewController alloc]init];`
 `imagePicker.delegate = self;`
-
-`[self presentViewController:self.imagePicker animated:YES completion:nil];`
+`[self presentViewController:imagePicker animated:YES completion:nil];`
