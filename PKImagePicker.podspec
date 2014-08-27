@@ -82,7 +82,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "PKImagePickerViewController.{h,m}", "PKImageBundle.bundle"
+  s.source_files  = "PKImagePickerViewController.{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -98,6 +98,9 @@ Pod::Spec.new do |s|
 
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
+  s.resource_bundles = {
+  	'PKImageBundle' => ['PKImageBundle.bundle/*.png']
+  }
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
