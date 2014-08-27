@@ -100,7 +100,6 @@
     UIButton *frontcamera = [[UIButton alloc]initWithFrame:CGRectMake(CGRectGetWidth(self.view.frame)-50, 5, 47, 25)];
     [frontcamera setImage:[UIImage imageNamed:@"PKImageBundle.bundle/front-camera"] forState:UIControlStateNormal];
     [frontcamera addTarget:self action:@selector(showFrontCamera:) forControlEvents:UIControlEventTouchUpInside];
-    [frontcamera setBackgroundColor:[UIColor colorWithWhite:0.3 alpha:0.2]];
     [self.view addSubview:frontcamera];
     }
     
