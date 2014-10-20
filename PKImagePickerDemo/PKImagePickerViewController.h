@@ -17,6 +17,6 @@
 
 @interface PKImagePickerViewController : UIViewController<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
-@property(nonatomic,strong) id<PKImagePickerViewControllerDelegate> delegate;
+@property(nonatomic,weak) id<PKImagePickerViewControllerDelegate> delegate;
 
 @end
