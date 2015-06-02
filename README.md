@@ -7,7 +7,7 @@ PKImagePickerDemo
 
 ##Usage
 
-`pod 'PKImagePicker', '~> 0.0.4'`
+`pod 'PKImagePicker', '~> 0.0.5'`
 
 `#import 'PKImagePickerViewController.h'`
 `PKImagePickerViewController *imagePicker = [[PKImagePickerViewController alloc]init];`

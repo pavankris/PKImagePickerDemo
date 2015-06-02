@@ -14,7 +14,7 @@
 		<string>https://github.com/pavankris/PKImagePickerDemo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>PKImagePickerDemo.xcodeproj/project.xcworkspace</string>
+	<string>PKImagePickerDemo.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>5A8C4DEC9516A46B7FF93479BC05F10E69AFFCA9</key>
