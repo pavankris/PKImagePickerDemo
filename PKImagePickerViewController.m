@@ -178,9 +178,19 @@
             UIImage *capturedImage = [[UIImage alloc]initWithData:imageData scale:1];
             self.isCapturingImage = NO;
             self.capturedImageView.image = capturedImage;
-            [self.view addSubview:self.imageSelectedView];
             self.selectedImage = capturedImage;
             imageData = nil;
+            
+            if ([self shouldSkipImageConfirmation]) {
+                [self dismissViewControllerAnimated:YES completion:^{
+                    if ([self.delegate respondsToSelector:@selector(imageSelected:)]) {
+                        [self.delegate imageSelected:self.selectedImage];
+                    }
+                    [self.imageSelectedView removeFromSuperview];
+                }];
+            } else {
+                [self.view addSubview:self.imageSelectedView];
+            }
         }
     }];
     
@@ -273,10 +283,21 @@
 {
     self.selectedImage = [info objectForKey:UIImagePickerControllerOriginalImage];
     
-    [self dismissViewControllerAnimated:YES completion:^{
-        self.capturedImageView.image = self.selectedImage;
-        [self.view addSubview:self.imageSelectedView];
-    }];
+    if ([self shouldSkipImageConfirmation]) {
+        [self dismissViewControllerAnimated:NO completion:^{
+            [self dismissViewControllerAnimated:YES completion:^{
+                if ([self.delegate respondsToSelector:@selector(imageSelected:)]) {
+                    [self.delegate imageSelected:self.selectedImage];
+                }
+                [self.imageSelectedView removeFromSuperview];
+            }];
+        }];
+    } else {
+        [self dismissViewControllerAnimated:YES completion:^{
+            self.capturedImageView.image = self.selectedImage;
+            [self.view addSubview:self.imageSelectedView];
+        }];
+    }
     
 }
 
