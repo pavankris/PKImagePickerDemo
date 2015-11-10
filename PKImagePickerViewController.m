@@ -104,10 +104,12 @@
     [self.view addSubview:frontcamera];
     }
     
-    UIButton *album = [[UIButton alloc]initWithFrame:CGRectMake(CGRectGetWidth(self.view.frame)-35, CGRectGetHeight(self.view.frame)-40, 27, 27)];
-    [album setImage:[UIImage imageNamed:@"PKImageBundle.bundle/library"] forState:UIControlStateNormal];
-    [album addTarget:self action:@selector(showalbum:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:album];
+    if (!self.doNotNeedAlbum) {
+        UIButton *album = [[UIButton alloc]initWithFrame:CGRectMake(CGRectGetWidth(self.view.frame)-35, CGRectGetHeight(self.view.frame)-40, 27, 27)];
+        [album setImage:[UIImage imageNamed:@"PKImageBundle.bundle/library"] forState:UIControlStateNormal];
+        [album addTarget:self action:@selector(showalbum:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:album];
+    }
     
     UIButton *cancel = [[UIButton alloc]initWithFrame:CGRectMake(5, CGRectGetHeight(self.view.frame)-40, 32, 32)];
     [cancel setImage:[UIImage imageNamed:@"PKImageBundle.bundle/cancel"] forState:UIControlStateNormal];
