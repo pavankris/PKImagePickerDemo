@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "PKImagePicker"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.summary      = "Replacement for UIImagePickerController"
 
   s.description  = "Replacement for UIImagePickerController which provides album and camera switcher integrated in the controller, so that you dont have to write a seperate actionsheet for it"
@@ -71,7 +71,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/pavankris/PKImagePickerDemo.git", :tag => "0.0.5" }
+  s.source       = { :git => "https://github.com/pavankris/PKImagePickerDemo.git", :tag => "0.0.6" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
